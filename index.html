@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Muhammad Rafly Assidiqi - Python Engineer, IoT Specialist, and Electrical Engineering Graduate from Universitas Lampung.">
+    <meta name="keywords" content="Muhammad Rafly Assidiqi, Python Engineer, IoT, Portfolio, Web Developer, Electrical Engineering">
+    <meta name="author" content="Muhammad Rafly Assidiqi">
+    <title>Muhammad Rafly Assidiqi | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">Rafly</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#education" class="nav-link" data-section="education">Education</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting animate-slide-up">
+                    <span class="greeting-icon">👋</span> Hello, I'm
+                </p>
+                <h1 class="hero-name animate-slide-up delay-1">
+                    Muhammad Rafly
+                    <span class="hero-name-accent">Assidiqi</span>
+                </h1>
+                <div class="hero-title-wrapper animate-slide-up delay-2">
+                    <span class="hero-title-label">I'm a </span>
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="typewriter-cursor">|</span>
+                </div>
+                <p class="hero-description animate-slide-up delay-3">
+                    A passionate Python Engineer & IoT specialist with enthusiasm to learn and develop. 
+                    Building innovative solutions that bridge software and hardware.
+                </p>
+                <div class="hero-cta animate-slide-up delay-4">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="hero-stats animate-slide-up delay-5">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="5">0</span>
+                        <span class="stat-plus">+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="2">0</span>
+                        <span class="stat-label">Achievements</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-wrapper animate-fade-in delay-2">
+                <div class="hero-image-container">
+                    <div class="hero-image-ring"></div>
+                    <div class="hero-image-ring ring-2"></div>
+                    <img src="assets/profile.jpg" alt="Muhammad Rafly Assidiqi" class="hero-image" id="heroImage">
+                    <div class="hero-image-badge">
+                        <i class="fas fa-code"></i>
+                    </div>
+                </div>
+                <div class="hero-floating-cards">
+                    <div class="floating-card card-python">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="floating-card card-iot">
+                        <i class="fas fa-microchip"></i>
+                        <span>IoT</span>
+                    </div>
+                    <div class="floating-card card-ai">
+                        <i class="fas fa-brain"></i>
+                        <span>AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Introduction</span>
+                <h2 class="section-title">About <span class="accent">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text reveal-left">
+                    <p class="about-description">
+                        I'm a fresh graduate of <strong>Electrical Engineering</strong> at 
+                        <strong>Universitas Lampung</strong> specializing in Electronics and Control. 
+                        Currently working as a <strong>Python Engineer</strong> at 
+                        <strong>CogniZest</strong>, a leading AI company in Indonesia.
+                    </p>
+                    <p class="about-description">
+                        I'm a responsible person, hardworker, honest, disciplined, able to work well 
+                        in a team, and always try new things consistently. I have a deep passion for 
+                        bridging the gap between software and hardware through IoT solutions.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Bandar Lampung, Indonesia</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <span class="info-label">Current Role</span>
+                                <span class="info-value">Python Engineer @ CogniZest</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <span class="info-label">Degree</span>
+                                <span class="info-value">B.Eng Electrical Engineering</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-language"></i>
+                            <div>
+                                <span class="info-label">TOEFL ITP</span>
+                                <span class="info-value">537</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-cards reveal-right">
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Software Development</h3>
+                        <p>Building scalable applications with Python, web technologies, and AI-driven solutions.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <i class="fas fa-microchip"></i>
+                        </div>
+                        <h3>IoT & Hardware</h3>
+                        <p>Designing PCB layouts and integrating IoT hardware with software systems.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI & Automation</h3>
+                        <p>Leveraging AI technologies including YOLO algorithm and data annotation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career Path</span>
+                <h2 class="section-title">Work <span class="accent">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <!-- CogniZest -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot current"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-badge current-badge">Current</div>
+                            <span class="timeline-date">
+                                <i class="far fa-calendar-alt"></i> Feb 2024 - Present
+                            </span>
+                        </div>
+                        <h3 class="timeline-title">Python Engineer</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i>
+                            PT Mulia Perdana Cipta (CogniZest) — Jakarta Raya, Indonesia
+                        </h4>
+                        <p class="timeline-desc">
+                            CogniZest is a leading AI company in Indonesia, accelerating business performance 
+                            by solving business process automation through AI.
+                        </p>
+                        <ul class="timeline-list">
+                            <li>Analyzing and understanding client requirements related to the Smart Locker System</li>
+                            <li>Collaborating with the UI/UX team to design new flows for the Smart Locker Application</li>
+                            <li>Proposing and presenting new ideas to enrich existing features or integrate new features</li>
+                            <li>Implementing new flows into the Smart Locker Application</li>
+                            <li>Conducting R&D on IoT hardware components and custom PCB layouts</li>
+                            <li>Performing integration testing between software and hardware</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">PCB Design</span>
+                            <span class="tag">AI</span>
+                            <span class="tag">Smart Locker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Control Engineering Lab -->
+                <div class="timeline-item reveal-right">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">
+                                <i class="far fa-calendar-alt"></i> Sep 2021 - Sep 2023
+                            </span>
+                        </div>
+                        <h3 class="timeline-title">Laboratory Assistant</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-flask"></i>
+                            Control Engineering Laboratory — Lampung, Indonesia
+                        </h4>
+                        <p class="timeline-desc">
+                            Providing experimental and research environment for students to learn, test, 
+                            and develop solutions related to control systems.
+                        </p>
+                        <ul class="timeline-list">
+                            <li>Assistant for Basic Control System Practicum with two experiment titles</li>
+                            <li>Assistant for Advanced Control System Practicum with four experiment titles</li>
+                            <li>Responsible for the website and inventory of the laboratory equipment</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Control Systems</span>
+                            <span class="tag">Teaching</span>
+                            <span class="tag">Research</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Museum Lampung -->
+                <div class="timeline-item reveal-left">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">
+                                <i class="far fa-calendar-alt"></i> Jul 2022 - Dec 2022
+                            </span>
+                        </div>
+                        <h3 class="timeline-title">Intern</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-landmark"></i>
+                            Museum Lampung — Lampung, Indonesia
+                        </h4>
+                        <p class="timeline-desc">
+                            Cultural institution dedicated to preserving and showcasing the rich heritage 
+                            and history of Lampung Province.
+                        </p>
+                        <ul class="timeline-list">
+                            <li>Completed a Grounding Measurement Project in the Exhibition Hall</li>
+                            <li>Created an interactive website for Museum Lampung</li>
+                            <li>Developed Kiosk with Virtual Tour for museum visitors</li>
+                            <li>Implemented IoT-based security system for collection items</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Web Development</span>
+                            <span class="tag">IoT</span>
+                            <span class="tag">Virtual Tour</span>
+                            <span class="tag">Kiosk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Smart Locker System -->
+                <div class="project-card reveal-up" id="project-smart-locker">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-year">2024</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Smart Locker System</h3>
+                    <p class="project-desc">
+                        Full-stack IoT smart locker solution with custom PCB design, 
+                        embedded systems, and mobile application for seamless package management.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>IoT</span>
+                        <span>PCB Design</span>
+                        <span>Embedded Systems</span>
+                    </div>
+                </div>
+
+                <!-- Visitor Counting System -->
+                <div class="project-card reveal-up" id="project-visitor-counting">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-year">2023</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Visitor Counting System</h3>
+                    <p class="project-desc">
+                        Webcam-based system that counts visitors entering, exiting, and inside 
+                        a building, with maximum capacity regulation for Museum Lampung.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>YOLO</span>
+                        <span>Computer Vision</span>
+                        <span>Webcam</span>
+                    </div>
+                </div>
+
+                <!-- Kiosk Navigation -->
+                <div class="project-card reveal-up" id="project-kiosk">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-map-signs"></i>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-year">2022</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Kiosk Navigation & Virtual Tour</h3>
+                    <p class="project-desc">
+                        Interactive kiosk with virtual tour capability, serving as an educational 
+                        tool to facilitate visitors in obtaining information at the Lampung Museum.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                        <span>Virtual Tour</span>
+                        <span>UI/UX</span>
+                    </div>
+                </div>
+
+                <!-- Security System IoT -->
+                <div class="project-card reveal-up" id="project-security-iot">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-year">2022</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">IoT Security System</h3>
+                    <p class="project-desc">
+                        IoT-based security system designed to protect museum collection items 
+                        from visitors' touch, ensuring preservation of cultural heritage.
+                    </p>
+                    <div class="project-tech">
+                        <span>IoT</span>
+                        <span>Sensors</span>
+                        <span>Embedded</span>
+                        <span>Security</span>
+                    </div>
+                </div>
+
+                <!-- Museum Website -->
+                <div class="project-card reveal-up" id="project-museum-web">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-year">2022</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Museum Lampung Website</h3>
+                    <p class="project-desc">
+                        Interactive website for Museum Lampung showcasing exhibitions, 
+                        collections, and visitor information for cultural education.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML/CSS</span>
+                        <span>PHP</span>
+                        <span>JavaScript</span>
+                        <span>Web Design</span>
+                    </div>
+                </div>
+
+                <!-- Faculty Profile App -->
+                <div class="project-card reveal-up" id="project-faculty-app">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-year">2021</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Unila Faculty Profile App</h3>
+                    <p class="project-desc">
+                        Android application built to help new students learn about faculties 
+                        at Universitas Lampung, enhancing basic university knowledge.
+                    </p>
+                    <div class="project-tech">
+                        <span>Android Studio</span>
+                        <span>Java</span>
+                        <span>Mobile Dev</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Capabilities</span>
+                <h2 class="section-title">Skills & <span class="accent">Expertise</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-content">
+                <div class="skills-category reveal-left">
+                    <h3 class="skills-category-title">
+                        <i class="fas fa-code"></i> Hard Skills
+                    </h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-icon"><i class="fab fa-python"></i></div>
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                            <span class="skill-name">Internet of Things</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-icon"><i class="fas fa-code"></i></div>
+                            <span class="skill-name">HTML / CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="75">
+                            <div class="skill-icon"><i class="fab fa-php"></i></div>
+                            <span class="skill-name">PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-icon"><i class="fas fa-eye"></i></div>
+                            <span class="skill-name">YOLO Algorithm</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-icon"><i class="fas fa-database"></i></div>
+                            <span class="skill-name">Data Annotation</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-icon"><i class="fas fa-circuit-board"></i></div>
+                            <span class="skill-name">PCB Design</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
+                            <span class="skill-name">Microsoft Office</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-category reveal-right">
+                    <h3 class="skills-category-title">
+                        <i class="fas fa-users"></i> Soft Skills
+                    </h3>
+                    <div class="soft-skills-grid">
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon"><i class="fas fa-bullseye"></i></div>
+                            <span>Discipline</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon"><i class="fas fa-handshake"></i></div>
+                            <span>Honest</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon"><i class="fas fa-crown"></i></div>
+                            <span>Leadership</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon"><i class="fas fa-puzzle-piece"></i></div>
+                            <span>Problem Solving</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon"><i class="fas fa-clock"></i></div>
+                            <span>Time Management</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon"><i class="fas fa-bolt"></i></div>
+                            <span>Work Under Pressure</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon"><i class="fas fa-sync-alt"></i></div>
+                            <span>Easily Adaptable</span>
+                        </div>
+                        <div class="soft-skill-item">
+                            <div class="soft-skill-icon"><i class="fas fa-users"></i></div>
+                            <span>Team Player</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Academic Background</span>
+                <h2 class="section-title">Education & <span class="accent">Activities</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-content">
+                <div class="edu-card main-edu reveal-up" id="edu-unila">
+                    <div class="edu-card-glow"></div>
+                    <div class="edu-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="edu-details">
+                        <h3>Universitas Lampung</h3>
+                        <p class="edu-degree">Bachelor Degree in Electrical Engineering</p>
+                        <p class="edu-focus">Electronics and Control</p>
+                        <div class="edu-meta">
+                            <span class="edu-date"><i class="far fa-calendar-alt"></i> Sep 2019 - Oct 2023</span>
+                            <span class="edu-gpa"><i class="fas fa-star"></i> GPA: 3.51 / 4.00</span>
+                        </div>
+                        <ul class="edu-list">
+                            <li>Participated in Kredensial Mikro Mahasiswa Indonesia (KMMI) multimedia technology program (2021)</li>
+                            <li>Participated in Program Mahasiswa Wirausaha (PMW) (2022)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="subsection-title reveal-up">
+                    <i class="fas fa-sitemap"></i> Organisational Experience
+                </h3>
+                <div class="org-grid">
+                    <div class="org-card reveal-left" id="org-himatro">
+                        <div class="org-badge">Dec 2019 - Jun 2021</div>
+                        <h4>HIMATRO</h4>
+                        <p class="org-full">Himpunan Mahasiswa Teknik Elektro UNILA</p>
+                        <p class="org-role">Staff of Talent Interest Division & Community Development Division</p>
+                        <ul class="org-list">
+                            <li>Coordinator of Electrical Goes To Village (EGOV)</li>
+                            <li>Sponsorship division for EE in Action 2020</li>
+                            <li>Fundraising division for EE in Action 2021</li>
+                        </ul>
+                    </div>
+                    <div class="org-card reveal-right" id="org-bemft">
+                        <div class="org-badge">Feb 2021 - Dec 2021</div>
+                        <h4>BEM FT UNILA</h4>
+                        <p class="org-full">Badan Eksekutif Mahasiswa Fakultas Teknik</p>
+                        <p class="org-role">Expert Staff of Strategic Studies</p>
+                        <ul class="org-list">
+                            <li>Public relations coordinator at KATELA event</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="subsection-title reveal-up">
+                    <i class="fas fa-trophy"></i> Achievements
+                </h3>
+                <div class="achievements-grid">
+                    <div class="achievement-card reveal-up" id="achievement-pmw">
+                        <div class="achievement-icon gold">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h4>PMW Funding</h4>
+                        <p>Successfully secured funding through the Program Mahasiswa Wirausaha at Universitas Lampung</p>
+                        <span class="achievement-year">2022</span>
+                    </div>
+                    <div class="achievement-card reveal-up" id="achievement-eaction">
+                        <div class="achievement-icon gold">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h4>Gold Medal — E-ACTION</h4>
+                        <p>Gold medal at the Electrical Innovation Contest, Talkshow, And Exhibition at Universitas Sriwijaya</p>
+                        <span class="achievement-year">2022</span>
+                    </div>
+                    <div class="achievement-card reveal-up" id="achievement-volunteer">
+                        <div class="achievement-icon green">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>World Clean-up Day</h4>
+                        <p>Volunteer at World Clean-up Day Indonesia, contributing to environmental sustainability</p>
+                        <span class="achievement-year">2023</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Let's Connect</span>
+                <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">
+                    I'm always open to discussing new opportunities, creative ideas, 
+                    or ways to contribute to your projects.
+                </p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-cards">
+                    <a href="mailto:rafly.assidiqi@gmail.com" class="contact-card reveal-up" id="contact-email">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>rafly.assidiqi@gmail.com</p>
+                    </a>
+                    <a href="tel:+62083170343247" class="contact-card reveal-up" id="contact-phone">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>083170343247</p>
+                    </a>
+                    <a href="https://www.linkedin.com/in/raflyassdq/" target="_blank" rel="noopener noreferrer" class="contact-card reveal-up" id="contact-linkedin">
+                        <div class="contact-card-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>raflyassdq</p>
+                    </a>
+                    <div class="contact-card reveal-up" id="contact-location">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Bandar Lampung, Indonesia</p>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper reveal-up">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="formName" name="name" required placeholder=" ">
+                            <label for="formName">Your Name</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="formEmail" name="email" required placeholder=" ">
+                            <label for="formEmail">Your Email</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="formSubject" name="subject" required placeholder=" ">
+                            <label for="formSubject">Subject</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="formMessage" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="formMessage">Your Message</label>
+                            <span class="form-line"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">Rafly</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">
+                    Designed & Built by Muhammad Rafly Assidiqi
+                </p>
+                <div class="footer-socials">
+                    <a href="mailto:rafly.assidiqi@gmail.com" aria-label="Email" id="footer-email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/raflyassdq/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" id="footer-linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="tel:+62083170343247" aria-label="Phone" id="footer-phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+                <p class="footer-copyright">
+                    &copy; 2024 Muhammad Rafly Assidiqi. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
